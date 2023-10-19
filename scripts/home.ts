@@ -34,4 +34,18 @@ buttons.forEach((btn) => {
     })
 })
 
+getByID('search-bar')?.addEventListener('click', () => {
+    console.log('search activated')
+    let val: string = getByID('search-input')?.textContent
+
+    let subgrp: Array<Prod> = [];
+    products.forEach((ele:Prod) => {
+        if(ele.title.toLowerCase().includes(val.toLowerCase()))
+            subgrp.push(ele)
+    })
+    console.log(subgrp)
+    HOME_ALL_CARDS!.innerHTML = cardForArrayProducts(subgrp)
+
+})
+
 setUpSortDropdown(HOME_ALL_CARDS!, products)
