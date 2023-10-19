@@ -27,3 +27,27 @@ Categories Page, Separate Carousels for categories...
 Card Layout changes for Cart Cards
 
 Filter by Category TBD if possible
+
+
+
+-------------------------------------------------
+19th Oct Update: 
+sorting Filters DONE 
+
+Search Bar TODO
+Product Page TODO
+CART Page TODO
+Payment Integration TODO
+Success Payment Redirect TODO
+Categories Page TODO
+
+ADD Wishlist feature 
+
+Page Titles change 
+
+
+sort by: price(low to high),rating(low to high),popularity(rating)
+filter by (customer rating,gender),
+add to cart (will stay on same page) (allow to increase or decrease quantity)
+from there move to cart should be there
+if someone clicks on cart without addition of items : cart is empty message should be seen

@@ -9,7 +9,7 @@ CAROUSEL_SECTN.innerHTML += `
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://www.bhphotovideo.com/bimages/BHUX-19191_Nikon_e_Homepage-top.png" class="d-block w-100" alt="..." height="578">
+      <img src="https://www.bhphotovideo.com/bimages/BHUX-19191_Nikon_e_Homepage-top.png" class="d-block w-100" alt="..." style="height: 36vw;">
       <div class="carousel-caption d-none d-md-block">
         <h5>Latest Releases in Electronics</h5>
         <p>Find the newest, coolest tech available in the market for the most amazing, discounted prices.</p>

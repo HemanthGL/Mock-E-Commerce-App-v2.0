@@ -1,3 +1,4 @@
+import { SORT_DROPDOWN, getByID } from "../static/constants.js";
 import { Prod } from "../static/interfaces";
 import { cardForArrayProducts } from "./retrieve-cards.js";
 
@@ -26,4 +27,21 @@ export function sortFunctionHelper(ele: HTMLElement, sortFn: Function, products:
         let sortedCards: Array<Prod> = sortFn(products)
         container.innerHTML = cardForArrayProducts(sortedCards);
     })
+}
+
+export function setUpSortDropdown(body: HTMLElement, products: Array<Prod>){
+
+    let ele = getByID('sortFilter')
+
+    ele!.innerHTML = SORT_DROPDOWN
+
+    let priceL2H = getByID('price-l-h')
+    let priceH2L = getByID('price-h-l')
+    let ratingSort = getByID('rating-sort')
+    let reviewCount = getByID('review-count')
+
+    let arr = [[priceH2L, sortByPriceHTL], [priceL2H, sortByPriceLTH], [ratingSort, sortByRating], [reviewCount, sortByReviewCount]]
+
+    arr.forEach((ele: Array<any>) => sortFunctionHelper(ele[0]!, ele[1], products, body!))
+
 }

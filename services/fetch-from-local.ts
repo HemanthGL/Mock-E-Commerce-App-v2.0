@@ -19,9 +19,9 @@ export async function getAllProdFromStor():Promise<Array<Prod>> {
 // get all products in a category
 export function getProdCategFromStor(categ: string) : Array<Prod> {
     let data = JSON.parse(localStorage.getItem('products')!)
-    let res: Array<Prod>;
+    let res: Array<Prod> = [];
 
-    data.data.forEach((ele: Prod)  => {
+    data.forEach((ele: Prod)  => {
         ele.category == categ ? res.push(ele) : {};
     });
 

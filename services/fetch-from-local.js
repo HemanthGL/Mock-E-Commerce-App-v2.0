@@ -26,8 +26,8 @@ export function getAllProdFromStor() {
 // get all products in a category
 export function getProdCategFromStor(categ) {
     let data = JSON.parse(localStorage.getItem('products'));
-    let res;
-    data.data.forEach((ele) => {
+    let res = [];
+    data.forEach((ele) => {
         ele.category == categ ? res.push(ele) : {};
     });
     return res;
