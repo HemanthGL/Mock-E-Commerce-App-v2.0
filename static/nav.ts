@@ -34,11 +34,11 @@ BODY_TAG.innerHTML = `
                             Shop By Category
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="http://127.0.0.1:5500/templates/Men-Clothing.html">Men's Clothing</a></li>
-                            <li><a class="dropdown-item" href="http://127.0.0.1:5500/templates/Women-Clothing.html">Women's Clothing</a></li>
+                            <li><a class="dropdown-item" href="https://ecommerce-ts-hemanth-v2.netlify.app/templates/Men-Clothing.html">Men's Clothing</a></li>
+                            <li><a class="dropdown-item" href="https://ecommerce-ts-hemanth-v2.netlify.app/templates/Women-Clothing.html">Women's Clothing</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="http://127.0.0.1:5500/templates/Electronics.html">Electronics</a></li>
-                            <li><a class="dropdown-item" href="http://127.0.0.1:5500//templates/Jewellery.html">Jewelery</a></li>
+                            <li><a class="dropdown-item" href="https://ecommerce-ts-hemanth-v2.netlify.app/templates/Electronics.html">Electronics</a></li>
+                            <li><a class="dropdown-item" href="https://ecommerce-ts-hemanth-v2.netlify.app/templates/Jewellery.html">Jewelery</a></li>
                         </ul>
                     </li>
 
