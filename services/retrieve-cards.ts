@@ -1,5 +1,6 @@
 import { STAR_ICON } from "../static/constants.js";
-import { Prod } from "../static/interfaces";
+import { Prod } from "../static/interfaces.js";
+import { addProdCartID } from "./cart-add-retrieval.js";
 
 // returning HTML for one single card
 export function cardForProduct(product: Prod): string {
@@ -29,9 +30,12 @@ export function cardForProduct(product: Prod): string {
                 </ul>
             </div>
         `
-
+    
     return cardHTML;
 }
+
+// assigning event listeners to button for adding to card
+
 
 // returning card content for Array of Products
 export function cardForArrayProducts(arr: Array<Prod>): string {

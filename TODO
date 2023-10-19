@@ -8,7 +8,9 @@
 8.                          Low to High
 9. Implement Sort by Popularity
 
-10. Routing on Navbar
+10. Search Bar Functionality
+
+11. Routing on Navbar
 
 Pages:
 11. Page Description Page
@@ -21,3 +23,7 @@ Pages:
 
 Ideas:
 Categories Page, Separate Carousels for categories...
+
+Card Layout changes for Cart Cards
+
+Filter by Category TBD if possible

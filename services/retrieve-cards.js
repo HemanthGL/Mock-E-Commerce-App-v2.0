@@ -27,6 +27,7 @@ export function cardForProduct(product) {
         `;
     return cardHTML;
 }
+// assigning event listeners to button for adding to card
 // returning card content for Array of Products
 export function cardForArrayProducts(arr) {
     let cardsHTML;
