@@ -193,7 +193,7 @@ export function addBtnToCart(){
 
 
     let buttons = document.querySelectorAll('.cart-btn')
-    console.log(buttons)
+    // console.log(buttons)
     buttons.forEach((btn) => {
         btn.addEventListener('click', (event) => {
             let btnID = (event.target as HTMLElement).id!;

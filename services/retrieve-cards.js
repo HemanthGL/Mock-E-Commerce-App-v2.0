@@ -4,30 +4,33 @@ export function cardForProduct(product) {
     let truncatedTitle = product.title.substring(0, 35);
     let cardHTML = `
             <div class="card" style="min-width: 220px" >
-                <div style="object-fit: contain">
-                    <img src="${product.image}" class="card-img-top p-5" alt="...">
-                </div>
-                <div class="card-body">
-                    <div class="d-flex align-items-end">
-                    <h5 class="card-title">${truncatedTitle}</h5>
-                    </div>
+                <div id="card-${product.id}" class="bubble">
                     
-                    <a href="./product.html?id=${product.id}" class = ""> </a>
+                    <div style="object-fit: contain">
+                        <img src="${product.image}" class="card-img-top p-5" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-end">
+                        <h5 class="card-title">${truncatedTitle}</h5>
+                        </div>
+                        
+                        <a href="./product.html?id=${product.id}" class = ""> </a>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Price:</b> $${product.price}</li>
+                        <li class="list-group-itemn d-flex justify-content-between p-4">
+                            <div>
+                            <b>Rating:</b> 
+                            ${product.rating.rate} ${STAR_ICON}
+                            </div>
+                            <div>
+                                [${product.rating.count}]
+                            </div>
+                            </li> 
+                            <!-- change to two separate divs later on -->
+                    </ul>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><b>Price:</b> $${product.price}</li>
-                    <li class="list-group-itemn d-flex justify-content-between p-4">
-                        <div>
-                        <b>Rating:</b> 
-                        ${product.rating.rate} ${STAR_ICON}
-                        </div>
-                        <div>
-                            [${product.rating.count}]
-                        </div>
-                        </li> 
-                        <!-- change to two separate divs later on -->
-                    <li class="list-group-item text-center p-3"><button class="btn btn-primary cart-btn" id="${product.id}" >Add Cart</button></li>
-                </ul>
+                <div class="list-group-item text-center p-3"><button class="btn btn-primary cart-btn" id="${product.id}" >Add Cart</button></div>
             </div>
         `;
     return cardHTML;
