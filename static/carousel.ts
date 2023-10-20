@@ -18,14 +18,14 @@ CAROUSEL_SECTN!.innerHTML += `
       </div>
     </div>
     <div class="carousel-item">
-      <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dwbeec1f68/homepage/HeroBanner/festive-desktop.jpg" class="d-block w-100" alt="..." height="578">
+      <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dwbeec1f68/homepage/HeroBanner/festive-desktop.jpg" class="d-block w-100" alt="..." style="height: 36vw;">
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="https://publish-p33712-e119997.adobeaemcloud.com/content/dam/adityabirlafashionandretailprogram/homepage/fy-2023-2024/oct-23/gtm-week1/6oct/20231006_Brands-D.jpg.transform/i1680x550/image.jpeg" class="d-block w-100" alt="..." height="578">
+      <img src="https://publish-p33712-e119997.adobeaemcloud.com/content/dam/adityabirlafashionandretailprogram/homepage/fy-2023-2024/oct-23/gtm-week1/6oct/20231006_Brands-D.jpg.transform/i1680x550/image.jpeg" class="d-block w-100" alt="..." style="height: 36vw;">
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
         <p>Some representative placeholder content for the third slide.</p>
