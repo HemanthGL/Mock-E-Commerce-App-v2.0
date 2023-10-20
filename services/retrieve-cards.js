@@ -91,3 +91,14 @@ export function cardForArrayCart(arr) {
     });
     return cardsHTML;
 }
+export function addCardToProduct() {
+    let bubbles = document.querySelectorAll('.bubble');
+    console.log('bubbles are : ', bubbles);
+    bubbles.forEach((ele) => {
+        let myID = (ele.id).substring(5);
+        // console.log('ele here is ', myID)
+        ele.addEventListener('click', () => {
+            window.location.href = `./product.html?id=${myID}`;
+        });
+    });
+}

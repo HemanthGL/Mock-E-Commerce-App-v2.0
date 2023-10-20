@@ -1,9 +1,18 @@
 import { getByID } from "../static/constants.js";
-import { cardForArrayCart } from "../services/retrieve-cards.js";
+import { addCardToProduct, cardForArrayCart } from "../services/retrieve-cards.js";
 import { addProdCartID, getCartContent, getCartTotal, getProdQuant, removeProdCartID } from "../services/cart-add-retrieval.js";
 import { getProdIDFromStor } from "../services/fetch-from-local.js";
 let ele = getByID('cart-section');
-ele.innerHTML = cardForArrayCart(getCartContent());
+let content = [];
+content = getCartContent();
+if (content.length == 0) {
+    ele === null || ele === void 0 ? void 0 : ele.innerHTML = "Cart is Empty";
+    ele === null || ele === void 0 ? void 0 : ele.classList.add('display-4', 'ms-5', 'mt-5');
+}
+else {
+    ele.innerHTML = cardForArrayCart(content);
+}
+addCardToProduct();
 ele.classList.add('d-flex', 'flex-wrap', 'gap-4');
 console.log('check here ');
 console.log(ele === null || ele === void 0 ? void 0 : ele.innerHTML);

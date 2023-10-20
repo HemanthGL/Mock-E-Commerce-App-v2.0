@@ -1,8 +1,7 @@
-var _a;
 import { getByID } from "../static/constants.js";
-import { cardForArrayProducts } from "../services/retrieve-cards.js";
+import { addCardToProduct, cardForArrayProducts } from "../services/retrieve-cards.js";
 import { getAllProdFromStor } from "../services/fetch-from-local.js";
-import { addProdCartID } from "../services/cart-add-retrieval.js";
+import { addBtnToCart, addProdCartID } from "../services/cart-add-retrieval.js";
 import { setUpSortDropdown } from "../services/sort-filters.js";
 const HOME_ALL_CARDS = getByID('all-cards');
 HOME_ALL_CARDS.innerHTML = '';
@@ -32,16 +31,25 @@ bubbles.forEach((ele) => {
         window.location.href = `./product.html?id=${myID}`;
     });
 });
-(_a = getByID('search-bar')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', () => {
-    var _a;
-    console.log('search activated');
-    let val = (_a = getByID('search-input')) === null || _a === void 0 ? void 0 : _a.textContent;
+// get search bar element
+const searchInput = document.getElementById("searchInput");
+// store name elements in array-like object
+// const namesFromDOM = document.getElementsByClassName("name");
+// listen for user events
+searchInput.addEventListener("keyup", (event) => {
+    console.log(searchInput);
+    let val = searchInput === null || searchInput === void 0 ? void 0 : searchInput.value;
+    console.log(val);
     let subgrp = [];
     products.forEach((ele) => {
-        if (ele.title.toLowerCase().includes(val.toLowerCase()))
+        if (ele.title.toLowerCase().includes(val.toLowerCase())) {
             subgrp.push(ele);
+            console.log('subgrp added ele: ', ele);
+        }
     });
     console.log(subgrp);
     HOME_ALL_CARDS.innerHTML = cardForArrayProducts(subgrp);
+    addBtnToCart();
+    addCardToProduct();
 });
 setUpSortDropdown(HOME_ALL_CARDS, products);

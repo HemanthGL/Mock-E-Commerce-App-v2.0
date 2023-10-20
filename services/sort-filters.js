@@ -1,5 +1,6 @@
 import { SORT_DROPDOWN, getByID } from "../static/constants.js";
-import { cardForArrayProducts } from "./retrieve-cards.js";
+import { addBtnToCart } from "./cart-add-retrieval.js";
+import { addCardToProduct, cardForArrayProducts } from "./retrieve-cards.js";
 export function sortByPriceHTL(products) {
     let sorted = sortByPriceLTH(products);
     return sorted.reverse();
@@ -20,6 +21,8 @@ export function sortFunctionHelper(ele, sortFn, products, container) {
     ele.addEventListener('click', () => {
         let sortedCards = sortFn(products);
         container.innerHTML = cardForArrayProducts(sortedCards);
+        addBtnToCart();
+        addCardToProduct();
     });
 }
 export function setUpSortDropdown(body, products) {

@@ -34,20 +34,26 @@ Filter by Category TBD if possible
 19th Oct Update: 
 sorting Filters DONE 
 
-Search Bar TODO
-Product Page TODO
+Search Bar TODO --- integrate globally
+Product Page TODO DONE
 CART Page TODO
-Payment Integration TODO
+Payment Integration TODO DONE PARTIAL - success
 Success Payment Redirect TODO
-Categories Page TODO
+Categories Page TODO 
 
-ADD Wishlist feature 
+ADD Wishlist feature  ------
 
-Page Titles change 
+Page Titles change  DONE
 
 
 sort by: price(low to high),rating(low to high),popularity(rating)
 filter by (customer rating,gender),
 add to cart (will stay on same page) (allow to increase or decrease quantity)
 from there move to cart should be there
-if someone clicks on cart without addition of items : cart is empty message should be seen
+
+if someone clicks on cart without addition of items : cart is empty message should be seen IMPORTANT DONE
+
+add to cart not working after sorted filters DONE
+add to cart not working after search remaps. DONE
+
+ideally put that logic of activating buttons in a function and call at end of cards construction function

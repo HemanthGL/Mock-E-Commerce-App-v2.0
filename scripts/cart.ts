@@ -1,11 +1,22 @@
 import { getByID } from "../static/constants.js";
-import { cardForArrayCart, cardForArrayProducts } from "../services/retrieve-cards.js";
+import { addCardToProduct, cardForArrayCart, cardForArrayProducts } from "../services/retrieve-cards.js";
 import { addProdCartID, getCartContent, getCartTotal, getProdQuant, getProductsArrCart, removeProdCartID } from "../services/cart-add-retrieval.js";
 import { getProdIDFromStor } from "../services/fetch-from-local.js";
+import { StoredProd } from "../static/interfaces.js";
 
 let ele = getByID('cart-section')
 
-ele!.innerHTML = cardForArrayCart(getCartContent())
+let content: Array<StoredProd> = []
+content = getCartContent()
+
+if (content.length == 0){
+    ele?.innerHTML = "Cart is Empty"
+    ele?.classList.add('display-4', 'ms-5', 'mt-5')
+} else {
+    ele!.innerHTML = cardForArrayCart(content)
+
+}
+addCardToProduct()
 ele!.classList.add('d-flex', 'flex-wrap', 'gap-4');
 console.log('check here ')
 console.log(ele?.innerHTML)

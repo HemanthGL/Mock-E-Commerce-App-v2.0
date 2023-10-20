@@ -1,7 +1,7 @@
 import { getByID } from "../static/constants.js";
-import { cardForArrayProducts } from "../services/retrieve-cards.js";
+import { addCardToProduct, cardForArrayProducts } from "../services/retrieve-cards.js";
 import { getAllProdFromStor } from "../services/fetch-from-local.js";
-import { addProdCartID } from "../services/cart-add-retrieval.js";
+import { addBtnToCart, addProdCartID } from "../services/cart-add-retrieval.js";
 import { Prod } from "../static/interfaces.js";
 import { setUpSortDropdown, sortByPriceHTL, sortByPriceLTH, sortByRating, sortByReviewCount, sortFunctionHelper } from "../services/sort-filters.js";
 
@@ -47,18 +47,35 @@ bubbles.forEach((ele) => {
     })
 })
 
-getByID('search-bar')?.addEventListener('click', () => {
-    console.log('search activated')
-    let val: string = getByID('search-input')?.textContent
+
+// get search bar element
+const searchInput = document.getElementById("searchInput");
+
+// store name elements in array-like object
+// const namesFromDOM = document.getElementsByClassName("name");
+
+// listen for user events
+searchInput!.addEventListener("keyup", (event) => {
+
+    console.log(searchInput)
+    let val: string = searchInput?.value!
+    console.log(val)
 
     let subgrp: Array<Prod> = [];
-    products.forEach((ele:Prod) => {
-        if(ele.title.toLowerCase().includes(val.toLowerCase()))
+    products.forEach((ele: Prod) => {
+        if (ele.title.toLowerCase().includes(val.toLowerCase())){
             subgrp.push(ele)
+            console.log('subgrp added ele: ', ele);
+        }
     })
+
     console.log(subgrp)
     HOME_ALL_CARDS!.innerHTML = cardForArrayProducts(subgrp)
 
-})
+    addBtnToCart()
+
+    addCardToProduct()
+
+});
 
 setUpSortDropdown(HOME_ALL_CARDS!, products)

@@ -1,6 +1,7 @@
 import { SORT_DROPDOWN, getByID } from "../static/constants.js";
 import { Prod } from "../static/interfaces";
-import { cardForArrayProducts } from "./retrieve-cards.js";
+import { addBtnToCart } from "./cart-add-retrieval.js";
+import { addCardToProduct, cardForArrayProducts } from "./retrieve-cards.js";
 
 export function sortByPriceHTL(products: Array<Prod>): Array<Prod>{
    let sorted = sortByPriceLTH(products)
@@ -26,6 +27,9 @@ export function sortFunctionHelper(ele: HTMLElement, sortFn: Function, products:
     ele.addEventListener('click', () => {
         let sortedCards: Array<Prod> = sortFn(products)
         container.innerHTML = cardForArrayProducts(sortedCards);
+
+        addBtnToCart()
+        addCardToProduct()
     })
 }
 
